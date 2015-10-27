@@ -1328,7 +1328,7 @@ qq.FineUploaderBasic.prototype = {
     _formatSize: function(bytes){
         var i = -1;
         do {
-            bytes = bytes / 1024;
+            bytes = bytes / 1000;
             i++;
         } while (bytes > 99);
 
@@ -3137,7 +3137,7 @@ qq.UploadHandlerForm = function(o, uploadCompleteCallback, logCallback) {
 /*globals qq, File, XMLHttpRequest, FormData, Blob*/
 qq.UploadHandlerXhr = function(o, uploadCompleteCallback, logCallback) {
     "use strict";
-    
+
     var options = o,
         uploadComplete = uploadCompleteCallback,
         log = logCallback,
